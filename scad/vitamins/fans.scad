@@ -5,7 +5,6 @@
 // hydraraptor.blogspot.com
 
 // based on http://www.thingiverse.com/thing:8063 by MiseryBot, CC license
-
 fan80x38 = [80, 38, 75, 35.75, M4_cap_screw, 40,   4.3, 84];
 fan70x15 = [70, 15, 66, 30.75, M4_cap_screw, 29,   3.8, 70];
 fan60x25 = [60, 25, 57, 25,    M4_cap_screw, 31.5, 3.6, 64];

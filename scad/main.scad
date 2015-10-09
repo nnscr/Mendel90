@@ -914,6 +914,8 @@ module machine_assembly(show_bed = true, show_heatshield = true, show_spool = tr
 
 
 
+//electronics_assembly();
+//frame_assembly(true);
 machine_assembly(true);
 //y_heatshield();
 //frame_assembly(show_spool = false);
