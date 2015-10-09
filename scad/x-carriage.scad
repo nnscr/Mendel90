@@ -649,7 +649,7 @@ module x_carriage_assembly(show_extruder = true, show_fan = true) {
     //
     // Fan assembly
     //
-    if(show_fan)
+    if(show_fan && hot_end_use_duct(hot_end))
         x_carriage_fan_assembly();
 
     assembly("x_carriage_assembly");

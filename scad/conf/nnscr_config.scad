@@ -19,8 +19,8 @@ X_motor = NEMA17;
 Y_motor = NEMA17;
 Z_motor = NEMA17;
 
-hot_end = JHeadMk5;
-//hot_end = E3D_V6_1_75;
+//hot_end = JHeadMk5;
+hot_end = E3D_V6_1_75;
 
 X_travel = 200;
 Y_travel = 200;
@@ -41,6 +41,11 @@ frame = DiBond;
 frame_corners = 25;
 frame_nuts = true;
 include_fan = true;
+
+logo = true;
+logo_text = "nnscr";
+logo_size = 35;
+logo_font = "Andale Mono:style=Standard";
 
 case_fan = fan80x38;
 //psu = KY240W;

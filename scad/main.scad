@@ -630,6 +630,15 @@ module frame_gantry() {
                 }
 
         fixing_block_holes();
+                
+        //
+        // logo
+        //
+        if (logo) {
+            translate([0, gantry_Y + sheet_thickness(frame)+1, height - base_clearance - ((gantry_thickness - (logo_size / 2)) / 2)]) rotate([90, 0, 0]) {
+                linear_extrude(sheet_thickness(frame)+2) text(logo_text, logo_size, logo_font, valign="top", halign="center");
+            }
+        }
 
         //
         // Z bar clamps
@@ -878,7 +887,7 @@ module frame_assembly(show_gantry = true) {
 }
 
 
-module machine_assembly(show_bed = true, show_heatshield = true, show_spool = true) {
+module machine_assembly(show_bed = true, show_heatshield = true, show_spool = false) {
     assembly("machine_assembly");
 
     translate([0,0, sheet_thickness(base)]) {

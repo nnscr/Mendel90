@@ -25,6 +25,10 @@ detaillevel = 1; // [0:coarse render only outlines,1:fine render with all detail
 // ######################################################################################################################
 e3d_v6(true);
 
+module e3d_hot_end(type) {
+    rotate([180, 0, 0]) e3d_v6();
+}
+
 module e3d_v6_fan_duct(with_fan=true) {
     rotate([90, 0, 0])
     translate([0, 20, 0])
