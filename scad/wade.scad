@@ -409,7 +409,7 @@ module wades_assembly(show_connector = true, show_drive = true) {
         for(side = [-1, 1])
             translate([filament_x + mount_pitch * side, base_thickness - 3, filament_z])
                 rotate([-90,0,0])
-                    screw(M4_hex_screw, 20);
+                    screw(M4_hex_screw, 15);
 
         //idler
         translate([filament_x + 22 + 39 * exploded, driven_y, filament_z])
@@ -531,7 +531,7 @@ module wades_big_gear_x5_stl(){
             translate([x * pitch, y * pitch, 0])
                 wades_big_gear_stl();
 }
-
+//hot_end=JHeadMk5;
 if(1)
     rotate([90, 0, 0])
         wades_assembly(true);

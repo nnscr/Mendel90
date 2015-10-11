@@ -5,7 +5,7 @@ include <fans.scad>
 e3d_hot_end(E3D_V6_1_75);
 
 module e3d_hot_end(type) {
-    translate([0, 0, hot_end_inset(type)]) e3d_v6();
+    rotate([0, 0, 180]) translate([0, 0, hot_end_inset(type)]) e3d_v6();
 }
 
 module e3d_v6_fan_duct(with_fan=true) {

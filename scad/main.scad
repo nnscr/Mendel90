@@ -927,6 +927,7 @@ module machine_assembly(show_bed = true, show_heatshield = true, show_spool = fa
 //electronics_assembly();
 //frame_assembly(true);
 machine_assembly(true);
+//machine_assembly(false);
 //y_heatshield();
 //frame_assembly(show_spool = false);
 //y_axis_assembly(true);

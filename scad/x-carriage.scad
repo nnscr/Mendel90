@@ -597,15 +597,16 @@ module x_carriage_stl(){
             //
             // Front mounting nut traps for fan assemblies
             //
-            for(end = [-1, 1])
-                translate([end * front_nut_pitch,
-                           -width / 2 + front_nut_depth,
-                           front_nut_z])
-                    rotate([90, 0, 0])
-                        intersection() {
-                            nut_trap(screw_clearance_radius(M3_cap_screw), M3_nut_radius, M3_nut_trap_depth, true);
-                            cylinder(r = M3_nut_radius + 1, h = bearing_holder_width(X_bearings), center = true);
-                        }
+            if (hot_end_use_fan(hot_end))
+                for(end = [-1, 1])
+                    translate([end * front_nut_pitch,
+                               -width / 2 + front_nut_depth,
+                               front_nut_z])
+                        rotate([90, 0, 0])
+                            intersection() {
+                                nut_trap(screw_clearance_radius(M3_cap_screw), M3_nut_radius, M3_nut_trap_depth, true);
+                                cylinder(r = M3_nut_radius + 1, h = bearing_holder_width(X_bearings), center = true);
+                            }
         }
 }
 
@@ -644,7 +645,8 @@ module x_carriage_assembly(show_extruder = true, show_fan = true) {
         for(end = [-1, 1])
             translate([25 * end, 0, nut_trap_thickness])
                 rotate([0, 0, 45])
-                    wingnut(M4_wingnut);
+                    //wingnut(M4_wingnut);
+                    nut(M4_nut);
     }
     //
     // Fan assembly
@@ -657,19 +659,20 @@ module x_carriage_assembly(show_extruder = true, show_fan = true) {
     //
     // Fan bracket screws
     //
-    for(side = [-1, 1])
-        translate([fan_x + side * front_nut_pitch, -width / 2 - fan_bracket_thickness, front_nut_z + top_thickness]) {
-            rotate([90, 0, 0])
-                screw_and_washer(M3_cap_screw, 10);
+    if (hot_end_use_duct(hot_end)) {
+        for(side = [-1, 1])
+            translate([fan_x + side * front_nut_pitch, -width / 2 - fan_bracket_thickness, front_nut_z + top_thickness]) {
+                rotate([90, 0, 0])
+                    screw_and_washer(M3_cap_screw, 10);
 
-            translate([0, fan_bracket_thickness + wall, 0])
-                rotate([-90, 0, 0])
-                    nut(M3_nut, true);
-        }
-
+                translate([0, fan_bracket_thickness + wall, 0])
+                    rotate([-90, 0, 0])
+                        nut(M3_nut, true);
+            }
+    }
     translate([base_offset, bar_y, bar_offset]) {
         linear_bearing(X_bearings);
-        rotate([0,-90,0])
+        rotate([0,-90,180])
             scale([bearing_radius(X_bearings) / bearing_ziptie_radius(X_bearings), 1])
                 ziptie(small_ziptie, bearing_ziptie_radius(X_bearings));
     }
