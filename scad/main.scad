@@ -800,8 +800,7 @@ module electronics_assembly() {
     assembly("electronics_assembly");
     translate([right_stay_x + sheet_thickness(frame) / 2, controller_y, controller_z])
         rotate([90, 0, 90]) {
-            controller_screw_positions(controller)
-                pcb_spacer_assembly(raspberry_pi ? 2 : 1, raspberry_pi ? $i >= 2 : true);
+            pcb_controller_spacer(controller);
 
             translate([0, 0, pcb_spacer_height() * (raspberry_pi ? 2 : 1)])
                 controller(controller);
@@ -888,7 +887,7 @@ module frame_assembly(show_gantry = true) {
 }
 
 
-module machine_assembly(show_bed = true, show_heatshield = true, show_spool = false) {
+module machine_assembly(show_bed = true, show_heatshield = true, show_spool = true) {
     assembly("machine_assembly");
 
     translate([0,0, sheet_thickness(base)]) {
