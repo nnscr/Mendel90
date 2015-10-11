@@ -21,6 +21,7 @@ Z_motor = NEMA17;
 
 //hot_end = JHeadMk5;
 hot_end = E3D_V6_1_75;
+//nozzle_length = hot_end_total_length(hot_end);
 
 X_travel = 200;
 Y_travel = 200;

@@ -12,7 +12,7 @@ use <d-motor_bracket.scad>
 use <vitamins/m90_hot_end.scad>
 use <vitamins/stoffel_hot_end.scad>
 use <vitamins/jhead_hot_end.scad>
-use <vitamins/e3d_v6_all_metal_hotend.scad>
+use <vitamins/e3d_v6_hot_end.scad>
 
 spring = false;             // use two nuts or one nut and a spring
 
@@ -473,6 +473,8 @@ module wades_assembly(show_connector = true, show_drive = true) {
     // Hot end
     //
     assembly("hot_end_assembly");
+    echo(str("nozzle_length ", nozzle_length));
+    echo(str("extension ", extension));
     translate([filament_x, -extension, filament_z])
         rotate([-90, 0, 0]) {
             if(hot_end_style(hot_end) == m90)
@@ -529,7 +531,6 @@ module wades_big_gear_x5_stl(){
             translate([x * pitch, y * pitch, 0])
                 wades_big_gear_stl();
 }
-
 
 if(1)
     rotate([90, 0, 0])

@@ -23,10 +23,10 @@ fnresolution = 0.4;
 detaillevel = 1; // [0:coarse render only outlines,1:fine render with all details]
 
 // ######################################################################################################################
-e3d_v6(true);
+e3d_hot_end(E3D_V6_1_75);
 
 module e3d_hot_end(type) {
-    rotate([180, 0, 0]) e3d_v6();
+    translate([0, 0, hot_end_inset(type)]) rotate([180, 0, 0]) e3d_v6();
 }
 
 module e3d_v6_fan_duct(with_fan=true) {

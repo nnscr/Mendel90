@@ -11,8 +11,8 @@ m90     = 2;
 jhead   = 3;
 e3d     = 9;
 
-function jhead_groove() = 4.64;
-function jhead_groove_offset() = 5.1; //4.76;
+function jhead_groove() = 4.64; // groove height
+function jhead_groove_offset() = 5.1; //4.76; (aka inset)
 
 jhead_inset = jhead_groove_offset();
 
@@ -24,7 +24,7 @@ JHeadMk4 =            [jhead, "HEJH16340: JHead MK4 hot end", 64, jhead_inset, 1
 JHeadMk5 =            [jhead, "HEJH16340: JHead MK5 hot end", 54, jhead_inset, 16,    40, "black", 12,            true, 9     + 4, [0, 2.38, -5], true];
 
 //                                                     total length      inset <      insulator    >  pitch   groove  < duct >
-E3D_V6_1_75 =         [e3d,   "E3D v6 1.75mm universal",    62.3,          12,     2, 12.5,  "black", false,    true, 0, false, false];
+E3D_V6_1_75 =         [e3d,   "E3D v6 1.75mm universal",    62.3,          3.7,  2, 12.5,  "black",        12,  true, 0, false, false];
 
 function hot_end_style(type)              = type[0];
 function hot_end_part(type)               = type[1];

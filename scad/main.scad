@@ -635,9 +635,10 @@ module frame_gantry() {
         // logo
         //
         if (logo) {
-            translate([0, gantry_Y + sheet_thickness(frame)+1, height - base_clearance - ((gantry_thickness - (logo_size / 2)) / 2)]) rotate([90, 0, 0]) {
-                linear_extrude(sheet_thickness(frame)+2) text(logo_text, logo_size, logo_font, valign="top", halign="center");
-            }
+            translate([0, gantry_Y + sheet_thickness(frame)+1, height - base_clearance - ((gantry_thickness - (logo_size / 2)) / 2)])
+            rotate([90, 0, 0])
+            linear_extrude(sheet_thickness(frame)+2)
+            text(logo_text, logo_size, logo_font, valign="top", halign="center");
         }
 
         //
