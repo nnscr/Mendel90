@@ -41,6 +41,8 @@ function controller_width(type)       = type[2];
 function controller_hole_inset(type)  = type[3];
 function controller_accessories(type) = type[4];
 
+controller(Arduino2560);
+
 module controller_screw_positions(type) {
     inset = controller_hole_inset(type);
 
@@ -49,10 +51,10 @@ module controller_screw_positions(type) {
         length = controller_length(Arduino2560);
         pcb_height = 1;
         
-        translate([width-2.5, length-14.0, pcb_height/2]) child();
-        translate([      2.5, length-15.3, pcb_height/2]) child();
-        translate([      2.5, length-90.2, pcb_height/2]) child();
-        translate([width-2.5, length-96.5, pcb_height/2]) child();
+        translate([      2.5, length-14.0, pcb_height/2]) child();
+        translate([width-2.5, length-15.3, pcb_height/2]) child();
+        translate([width-2.5, length-90.2, pcb_height/2]) child();
+        translate([      2.5, length-96.5, pcb_height/2]) child();
     } else {
         for($i = [0:3])
             assign(x = [inset, controller_width(type) - inset][$i % 2])

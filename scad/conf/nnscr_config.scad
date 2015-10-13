@@ -10,8 +10,8 @@
 echo("nnscr Mendel90:");
 
 Z_bearings = LM10UU; // besser 10?
-Y_bearings = LM8UU;
-X_bearings = LM8UU;
+Y_bearings = LM10UU;
+X_bearings = LM10UU;
 
 exploded = 0;
 
@@ -34,14 +34,30 @@ bed_glass = glass2;
 bed_thickness = pcb_thickness + sheet_thickness(bed_glass);    // PCB heater plus glass sheet
 bed_holes = [209, 209];
 
-base = DiBond;               // Sheet material used for the base. Needs to be thick enough to screw into.
-base_corners = 25;
-base_nuts = true;
+// START DIBOND VERSION
+//cnc_sheets = true;
+//base = DiBond;
+//base_corners = 25;
+//base_nuts = true;
+//frame = DiBond;
+//frame_corners = 25;
+//frame_nuts = true;
+//Y_carriage = DiBond;
+// END DIBOND VERSION
 
-frame = DiBond;
-frame_corners = 25;
-frame_nuts = true;
+// START MDF VERSION
+cnc_sheets = false;
+base = MDF12;
+base_corners = 1;
+base_nuts = false;
+frame = MDF6;
+frame_corners = 1;
+frame_nuts = false;
+Y_carriage = MDF6;
+// END MDF VERSION
+
 include_fan = true;
+use_realistic_colors=true;
 
 logo = true;
 logo_text = "nnscr";
@@ -63,9 +79,6 @@ top_limit_switch = true;
 
 single_piece_frame = true;
 stays_from_window = false;
-cnc_sheets = true;
-
-Y_carriage = DiBond;
 
 pulley_type = T2p5x16_metal_pulley;
 X_belt = T2p5x6;
