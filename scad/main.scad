@@ -887,7 +887,7 @@ module frame_assembly(show_gantry = true) {
 }
 
 
-module machine_assembly(show_bed = true, show_heatshield = true, show_spool = true) {
+module machine_assembly(show_bed = true, show_heatshield = true, show_spool = false) {
     assembly("machine_assembly");
 
     translate([0,0, sheet_thickness(base)]) {

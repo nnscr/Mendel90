@@ -1,10 +1,10 @@
 frame_assembly:
 Vitamins:
-  1 MDF sheet 475mm x 422mm x 12mm
-  2 MDF sheet 161mm x 396mm x 6mm
-  1 MDF sheet 475mm x 396mm x 6mm
- 28 No6 pan wood screw x 12mm
- 11 No6 pan wood screw x 16mm
+  2 MDF sheet 155mm x 403mm x 12mm
+  1 MDF sheet 475mm x 403mm x 12mm
+  1 MDF sheet 475mm x 422mm x 16mm
+ 28 No6 pan wood screw x 16mm
+ 11 No6 pan wood screw x 20mm
  39 Washer M4 x 9mm x 0.8mm
  39 Star washer M4 x 0.8mm
 

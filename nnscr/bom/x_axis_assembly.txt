@@ -1,6 +1,6 @@
 x_axis_assembly:
 Vitamins:
-  1 Belt T2.5 x 6mm x 878mm
+  1 Belt T2.5 x 6mm x 875mm
   2 Nut M4
   2 Smooth rod 10mm x 389mm
 

@@ -11,18 +11,19 @@ function pcb_spacer_height() = part_base_thickness - pcb_thickness;
 
 pcb_screw_length = frame_screw_length;
 
-module pcb_controller_spacer(controller, screw = M3_cap_screw, thickness=pcb_spacer_height(), expand=3) {
+module pcb_controller_spacer(controller, screw = M3_cap_screw, thickness=pcb_spacer_height(), expand=4) {
     if (controller == Arduino2560) {
-        th = thickness / 2;
+        thb = thickness / 3;
+        ths = thickness / 3 * 2;
         difference() {
             union() {
                 // base plate
-                translate([-expand/2, -expand/2, 0])
-                    cube([controller_width(controller)+expand, controller_length(controller)+expand, th]);
+                translate([-expand, -expand, 0])
+                    cube([controller_width(controller)+expand*2, controller_length(controller)+expand*2, thb]);
                 
                 // spacers
-                translate([0, 0, th]) controller_screw_positions(controller)
-                        cylinder(r=screw_radius(screw)*2, h=th, center=true);
+                translate([0, 0, thb]) controller_screw_positions(controller)
+                        cylinder(r=screw_radius(screw)*2, h=ths, center=true);
             }
             
             // holes

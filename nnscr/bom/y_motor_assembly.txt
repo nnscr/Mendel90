@@ -3,7 +3,7 @@ Vitamins:
   1 M4 grub screw x 6mm
   1 NEMA17 x 47mm stepper motor
   4 M3 pan screw x 8mm
-  4 No6 pan wood screw x 16mm
+  4 No6 pan wood screw x 20mm
   1 T2.5 pulley 16 teeth
   4 Washer M3 x 7mm x 0.5mm
   4 Washer M4 x 9mm x 0.8mm

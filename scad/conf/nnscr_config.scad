@@ -47,17 +47,18 @@ bed_holes = [209, 209];
 
 // START MDF VERSION
 cnc_sheets = false;
-base = MDF12;
-base_corners = 1;
+base = MDF16;
+base_corners = 15;
 base_nuts = false;
-frame = MDF6;
-frame_corners = 1;
+frame = MDF12;
+frame_corners = 15;
 frame_nuts = false;
-Y_carriage = MDF6;
+Y_carriage = MDF12;
 // END MDF VERSION
 
 include_fan = true;
 use_realistic_colors=true;
+printed_plastic_color = "LimeGreen";
 
 logo = true;
 logo_text = "nnscr";

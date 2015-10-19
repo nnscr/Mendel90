@@ -473,8 +473,6 @@ module wades_assembly(show_connector = true, show_drive = true) {
     // Hot end
     //
     assembly("hot_end_assembly");
-    echo(str("nozzle_length ", nozzle_length));
-    echo(str("extension ", extension));
     translate([filament_x, -extension, filament_z])
         rotate([-90, 0, 0]) {
             if(hot_end_style(hot_end) == m90)

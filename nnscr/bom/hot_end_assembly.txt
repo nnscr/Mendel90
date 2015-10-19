@@ -1,8 +1,6 @@
 hot_end_assembly:
 Vitamins:
   1 Fan 30mm x 10mm
-  1 extension 3.7
-  1 nozzle_length 62.3
 
 Printed:
 

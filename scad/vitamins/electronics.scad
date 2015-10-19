@@ -41,8 +41,6 @@ function controller_width(type)       = type[2];
 function controller_hole_inset(type)  = type[3];
 function controller_accessories(type) = type[4];
 
-controller(Arduino2560);
-
 module controller_screw_positions(type) {
     inset = controller_hole_inset(type);
 
