@@ -50,10 +50,10 @@ cnc_sheets = false;
 base = MDF16;
 base_corners = 15;
 base_nuts = false;
-frame = MDF12;
+frame = MDF10;
 frame_corners = 15;
 frame_nuts = false;
-Y_carriage = MDF12;
+Y_carriage = MDF10;
 // END MDF VERSION
 
 include_fan = true;
@@ -75,7 +75,7 @@ controller = Arduino2560;
 raspberry_pi = false;
 
 spool = spool_300x85;
-bottom_limit_switch = true;
+bottom_limit_switch = false;
 top_limit_switch = true;
 
 single_piece_frame = true;

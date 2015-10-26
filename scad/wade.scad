@@ -132,7 +132,7 @@ module wades_block_stl() {
 
         translate([filament_x, 20, filament_z])
             rotate([90,0,0])
-                teardrop(h = 70, r=4/2, center=true);                       // filament
+                #teardrop(h = 70, r=2/2, center=true);                       // filament
 
         // mounting holes
         for(side = [-1, 1])

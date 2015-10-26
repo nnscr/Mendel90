@@ -3,7 +3,7 @@ Vitamins:
  14 M3 cap screw x 16mm
   2 M3 cap screw x 20mm
   3 LM10UU linear bearing
-  1 MDF sheet 217mm x 217mm x 12mm
+  1 MDF sheet 217mm x 217mm x 10mm
  16 Nyloc nut M3
  22 Washer M3 x 7mm x 0.5mm
   3 Ziptie 105mm min length
